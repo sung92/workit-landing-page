@@ -4,4 +4,4 @@
 
 # Deployed in:
 
-Visit: [website](https://workit-landing-page-sung.netlify.app/)
+Visit: [https://workit-landing-page-sung.netlify.app/](https://workit-landing-page-sung.netlify.app/)
