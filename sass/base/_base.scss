@@ -1,0 +1,96 @@
+@use "../abstracts/functions" as f;
+@use "../abstracts/colors";
+
+/**************************/
+/* Tweaking Text Level Styles: strike-through */
+/**************************/
+
+del, s {
+  text-decoration: line-through;
+}
+
+mark::before, mark::after, del::before, del::after, ins::before, ins::after, s::before, s::after {
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+}
+
+s::before {
+  content: ' [strike-through start] ';
+}
+s::after {
+  content: ' [strike-through end] ';
+}
+
+.visually-hidden:not(:focus):not(:active) {
+  clip: rect(0 0 0 0); 
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap; 
+  width: 1px;
+}
+
+
+/*TYPOGRAPHY*/
+/************/
+$ff-accent: 'Fraunces';
+$ff-base: 'Manrope';
+
+$fw-regular: 400;
+$fw-semibold: 600;
+$fw-bold: 700;
+
+@font-face {
+	font-family: $ff-accent;
+	src: url('./assets/fonts/fraunces/static/Fraunces_144pt-SemiBold.ttf')
+		format('woff2-variations');
+}
+
+@font-face {
+	font-family: $ff-base;
+	src: url('./assets/fonts/manrope/static/Manrope-Regular.ttf') format('woff2-variations');
+}
+
+/**************************/
+/* Body */
+/**************************/
+
+body {
+    // padding: f.rem(65px) f.rem(25px);
+    font-size: f.rem(18px);
+    font-family: 'Manrope', sans-serif;
+    // background-color: var(--color-very-darkblue-main);
+
+    // height: 100%;
+    
+    // display: grid;
+    // place-content: center;
+}
+
+/**************************/
+/* Main */
+/**************************/
+
+main {
+
+}
+
+@media (width > 44em) {
+
+}
+
+@media (width > 71.25em) {
+  body {
+  }
+
+  main {
+
+  }
+}
+
