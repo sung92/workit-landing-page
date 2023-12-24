@@ -98,10 +98,6 @@ header {
     width: 100%;
     
     background-color: var(--color-ghost-white);
-    display: flex;
-    flex-direction: column;
-    gap: f.rem(20px);
-    text-align: center;
 
     position: relative;
 
@@ -119,6 +115,13 @@ header {
         z-index: -1;
     }
 }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: f.rem(20px);
+        text-align: center;
+    }
 
 .prod-number {
     font-family: 'Fraunces', sans-serif;
